@@ -747,7 +747,7 @@ function zwrocStosDo8() {
 
 	let kartyZeStosu = [...opisKolumn[9]];
 
-	for (let i = 0; i < kartyZeStosu.length; i++) {
+	for (let i = kartyZeStosu.length - 1; i >= 0; i--) {
 		let idKarty = kartyZeStosu[i];
 		let karta = document.getElementById(String(idKarty));
 
@@ -755,7 +755,7 @@ function zwrocStosDo8() {
 			karta.style.backgroundImage = 'url("Karty/Tyl.png")';
 			karta.style.top = "40px";
 			karta.style.left = "80px";
-			karta.style.zIndex = i + 1;
+			karta.style.zIndex = kartyZeStosu.length - i;
 			karta.style.position = "absolute";
 		}
 
